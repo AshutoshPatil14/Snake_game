@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#gameCanvas {
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.score-container {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.current-score, .high-score {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+.start-button, .pause-button, .exit-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.start-button {
+    background: #4CAF50;
+}
+
+.pause-button {
+    background: #2196F3;
+}
+
+.exit-button {
+    background: #f44336;
+}
+
+.start-button:hover, .pause-button:hover, .exit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.start-button:hover {
+    background: #45a049;
+}
+
+.pause-button:hover {
+    background: #1976D2;
+}
+
+.exit-button:hover {
+    background: #d32f2f;
+}
+
+.start-button:active, .pause-button:active, .exit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
